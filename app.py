@@ -24,6 +24,13 @@ def suggest(movie):
 
     return recommended_movie_names,recommended_movie_posters
 
+st.set_page_config(
+    page_title="Arshad MRS",  # This sets the tab name
+    layout="centered",                  # Optional: 'centered' or 'wide'
+    initial_sidebar_state="expanded"    # Optional: 'expanded' or 'collapsed'
+)
+
+
 st.title('Movie Recommender System')
 
 movie_dict = pickle.load(open('movie_dict.pkl', "rb"))
